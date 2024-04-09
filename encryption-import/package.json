@@ -1,0 +1,24 @@
+{
+  "name": "sample-import-encryption",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf bin && rm -rf node_modules",
+    "cb": "yarn clean && yarn && yarn build",
+    "start": "node --experimental-vm-modules --experimental-wasm-modules bin/index.js",
+    "dev": "yarn cb && yarn start"
+  },
+  "dependencies": {
+    "@matrix-org/olm": "^3.2.15",
+    "@river-build/encryption-pkg": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
